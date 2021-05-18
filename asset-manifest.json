@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/imagefinder/static/js/main.1d5aae23.chunk.js",
-    "main.js.map": "/imagefinder/static/js/main.1d5aae23.chunk.js.map",
-    "runtime-main.js": "/imagefinder/static/js/runtime-main.fe352576.js",
-    "runtime-main.js.map": "/imagefinder/static/js/runtime-main.fe352576.js.map",
-    "static/js/2.2874c963.chunk.js": "/imagefinder/static/js/2.2874c963.chunk.js",
-    "static/js/2.2874c963.chunk.js.map": "/imagefinder/static/js/2.2874c963.chunk.js.map",
+    "main.js": "/imagefinder/static/js/main.c2e65858.chunk.js",
+    "main.js.map": "/imagefinder/static/js/main.c2e65858.chunk.js.map",
+    "runtime-main.js": "/imagefinder/static/js/runtime-main.5922bdb3.js",
+    "runtime-main.js.map": "/imagefinder/static/js/runtime-main.5922bdb3.js.map",
+    "static/js/2.e37c7021.chunk.js": "/imagefinder/static/js/2.e37c7021.chunk.js",
+    "static/js/2.e37c7021.chunk.js.map": "/imagefinder/static/js/2.e37c7021.chunk.js.map",
     "index.html": "/imagefinder/index.html",
-    "static/js/2.2874c963.chunk.js.LICENSE.txt": "/imagefinder/static/js/2.2874c963.chunk.js.LICENSE.txt",
+    "static/js/2.e37c7021.chunk.js.LICENSE.txt": "/imagefinder/static/js/2.e37c7021.chunk.js.LICENSE.txt",
     "static/media/bookmark.f386a8c0.svg": "/imagefinder/static/media/bookmark.f386a8c0.svg",
     "static/media/cloud.041dd8a4.svg": "/imagefinder/static/media/cloud.041dd8a4.svg",
     "static/media/profileicon.1832bba4.svg": "/imagefinder/static/media/profileicon.1832bba4.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.fe352576.js",
-    "static/js/2.2874c963.chunk.js",
-    "static/js/main.1d5aae23.chunk.js"
+    "static/js/runtime-main.5922bdb3.js",
+    "static/js/2.e37c7021.chunk.js",
+    "static/js/main.c2e65858.chunk.js"
   ]
 }
