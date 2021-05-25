@@ -1,6 +1,6 @@
 import Pagination from 'react-js-pagination';
-import { fetchData } from '../../ducks/imagesReducer';
-import { changePageAction } from '../../ducks/paginationReducer';
+import { fetchData } from '../../redux/reducers/imagesReducer';
+import { changePageAction } from '../../redux/reducers/paginationReducer';
 import { useAppDispatch } from '../../hooks/hooks';
 import { PaginationWrapper } from './style';
 

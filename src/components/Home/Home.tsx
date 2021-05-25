@@ -9,8 +9,12 @@ import {
   serchfieldSelector,
   setSearchfield, 
   totalItemsCountSelector
-} from '../../ducks/imagesReducer';
-import { offsetSelector, pageLimitSelector, pageNumberSelector } from '../../ducks/paginationReducer';
+} from '../../redux/reducers/imagesReducer';
+import { 
+  offsetSelector, 
+  pageLimitSelector, 
+  pageNumberSelector 
+} from '../../redux/reducers/paginationReducer';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { Card, Sidebar, Paginations } from '../index';
 import { 
@@ -47,7 +51,7 @@ function Home() {
       <MainWrapper>
         <StyledForm onSubmit={handleSubmit}>
           <input ref={input} onChange={debounce(handleSubmit, 1500)}/>
-          <button type="submit">Search</button>
+          {/* <button type="submit">Search</button> */}
         </StyledForm>
         {recievedImages[0] && <Paginations 
           pageLimit={pageLimit} 
@@ -55,8 +59,12 @@ function Home() {
           currentPageNumber={currentPageNumber}
           totalItemsCount={+totalItemsCount}/>}
       {!recievedImages[0] ? <p>No images here. Would you try to search for anything else?</p> : 
-        <CardsWrapper>{recievedImages.slice(offset, offset + pageLimit).map((image: RecievedPhotoObjType, index: number) => <Card key={index} title={image.title} farm={image.farm} server={image.server}
-          id={image.id} secret={image.secret} bookmarkedImages={bookmarkedImages}/>)}</CardsWrapper>}
+        <CardsWrapper>{recievedImages
+          .slice(offset, offset + pageLimit)
+          .map((image: RecievedPhotoObjType, index: number) => 
+          <Card key={index} title={image.title} farm={image.farm} server={image.server}
+          id={image.id} secret={image.secret} bookmarkedImages={bookmarkedImages}/>)}
+        </CardsWrapper>}
       </MainWrapper>
       
     </HomeWrapper>

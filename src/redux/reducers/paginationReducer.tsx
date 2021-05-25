@@ -1,4 +1,4 @@
-import { AppStateType } from '../redux/store';
+import { AppStateType } from '../store';
 import { SET_SEARCHFIELD, SetSearchfieldActionType } from './imagesReducer';
 
 export const CHANGE_PAGE = 'CHANGE_PAGE';

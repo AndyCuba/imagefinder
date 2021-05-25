@@ -1,5 +1,5 @@
-import { getUniquePhotos } from '../helpers/helpers';
-import { AppDispatch, AppStateType } from '../redux/store';
+import { getUniquePhotos } from '../../helpers/helpers';
+import { AppDispatch, AppStateType } from '../store';
 
 const GET_DATA_REQUESTED = 'GET_DATA_REQUESTED';
 const GET_DATA_SUCCEDED = 'GET_DATA_SUCCEDED';

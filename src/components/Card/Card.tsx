@@ -1,6 +1,14 @@
-import { addPhotoAction, RecievedPhotoObjType, removePhotoAction } from '../../ducks/imagesReducer';
+import { 
+  addPhotoAction, 
+  RecievedPhotoObjType, 
+  removePhotoAction 
+} from '../../redux/reducers/imagesReducer';
 import { useAppDispatch } from '../../hooks/hooks';
-import { CardWrapper, StyledButton, StyledImage } from './style';
+import { 
+  CardWrapper, 
+  StyledButton, 
+  StyledImage 
+} from './style';
 
 type CardPropsType = {
   title: string,
@@ -14,33 +22,30 @@ type CardPropsType = {
 function Card(props: CardPropsType) {
   const { farm, server, id, secret, title, bookmarkedImages } = props;
   const dispatch = useAppDispatch();
-  const findImage = bookmarkedImages.findIndex((item: RecievedPhotoObjType) => item.id === id);
+  const findImageIndex = bookmarkedImages.findIndex((item: RecievedPhotoObjType) => item.id === id);
+  const isBookmarked = findImageIndex !== -1;
 
-  const handleAddClick = (e: React.FormEvent<EventTarget>) => {
+  const handleClick = (e: React.FormEvent<EventTarget>) => {
     e.preventDefault();
     if(e.target !== null) {
       const target = e.target as HTMLButtonElement;
       const sibling = target.previousSibling as HTMLDivElement;
-      dispatch(addPhotoAction(sibling.id))
-    }
-  };
-
-  const handleDeleteClick = (e: React.FormEvent<EventTarget>) => {
-    e.preventDefault();
-    if(e.target !== null) {
-      const target = e.target as HTMLButtonElement;
-      const sibling = target.previousSibling as HTMLDivElement;
-      dispatch(removePhotoAction(sibling.id))
-    }
+      if(isBookmarked) {
+        dispatch(removePhotoAction(sibling.id));
+      } else {
+        dispatch(addPhotoAction(sibling.id));
+      };
+    };
   };
 
   return (
     <CardWrapper>
       <StyledImage farm={farm} server={server} id={id} secret={secret} title={title}/>
-      {findImage === -1 ? <StyledButton onClick={handleAddClick}>Bookmark it</StyledButton> :
-        <StyledButton onClick={handleDeleteClick}>Remove it</StyledButton>}
+      <StyledButton onClick={handleClick}>
+        {isBookmarked ? 'Remove it' : 'Bookmark it'}
+      </StyledButton>
     </CardWrapper>
   );
-}
+};
   
 export default Card;

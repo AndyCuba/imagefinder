@@ -2,7 +2,7 @@ import { Card } from '../index';
 import { useAppSelector } from '../../hooks/hooks';
 import Sidebar from '../Sidebar/Sidebar';
 import { BookmarksWrapper, CardsWrapper } from './style';
-import { bookmarkedImagesSelector, RecievedPhotoObjType } from '../../ducks/imagesReducer';
+import { bookmarkedImagesSelector, RecievedPhotoObjType } from '../../redux/reducers/imagesReducer';
 
 function Bookmarks() {
   const bookmarkedImages = useAppSelector(bookmarkedImagesSelector);

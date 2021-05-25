@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { imagesReducer } from '../ducks/imagesReducer';
-import { paginationsReducer } from '../ducks/paginationReducer';
+import { imagesReducer } from './reducers/imagesReducer';
+import { paginationsReducer } from './reducers/paginationReducer';
 
 
 const rootReducer = combineReducers({

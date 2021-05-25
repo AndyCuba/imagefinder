@@ -12,7 +12,7 @@ const zoomIn = keyframes`
 const PaginationWrapper = styled.div`
     position: absolute;
     top: 20%;
-    right: 25%;
+    right: 35%;
     transform: translate(50%);
     .pagination {
         display: flex;
@@ -43,6 +43,9 @@ const PaginationWrapper = styled.div`
         text-decoration: none;
         color: grey;
         font-weight: bold;
+    }
+    @media (max-width: 60rem) {
+        top: 12%; 
     }
 `;
 

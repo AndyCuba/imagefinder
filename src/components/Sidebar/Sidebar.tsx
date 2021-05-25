@@ -1,13 +1,15 @@
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { SidebarWrapper, StyledBookmarksIcon, StyledHomeIcon } from './style';
 
 function Sidebar() {
-    return (
-      <SidebarWrapper >
-        <Link to='/'><StyledHomeIcon/></Link>
-        <Link to='/bookmarks'><StyledBookmarksIcon /></Link>
-      </SidebarWrapper>
-    );
-  }
+  const {pathname} = useLocation();
+  
+  return (
+    <SidebarWrapper >
+      <StyledHomeIcon to='/' pathname={pathname} />
+      <StyledBookmarksIcon to='/bookmarks' pathname={pathname} />
+    </SidebarWrapper>
+  );
+}
   
 export default Sidebar;

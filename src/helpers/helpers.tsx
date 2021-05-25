@@ -1,4 +1,4 @@
-import { RecievedPhotoObjType } from '../ducks/imagesReducer';
+import { RecievedPhotoObjType } from '../redux/reducers/imagesReducer';
 
 
 function getUniquePhotos(arr: RecievedPhotoObjType[])  {
